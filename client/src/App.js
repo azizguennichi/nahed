@@ -48,57 +48,57 @@ import HerService from "./component/admin/herService/HerService";
 import AuthApi from "./component/services/AuthApi";
 
 function App() {
-  const [users, setUsers] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(AuthApi());
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/users")
-      .then((res) => setUsers(res.data))
-      .catch((error) => console.log(error));
-  }, []);
+  // const [users, setUsers] = useState("");
+  // const [isAuthenticated, setIsAuthenticated] = useState(AuthApi());
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3000/users")
+  //     .then((res) => setUsers(res.data))
+  //     .catch((error) => console.log(error));
+  // }, []);
   return (
-    <MonContexte.Provider value={{ isAuthenticated, setIsAuthenticated }}>
-      <div className="App">
-        <div className="content">
-          <h1>{users}</h1>
-          <Routes>
-            <Route
-              path="/autoQuitterReservation"
-              element={<AutoQuitterReservation />}
-            />
-            <Route path="/autoSortie" element={<AutoSortie />} />
-            <Route path="/congeVacance" element={<CongeVacance />} />
-            <Route path="/debutTravaux" element={<DebutTravaux />} />
-            <Route path="/docAdministratif" element={<DocAdministratif />} />
-            <Route path="/account" element={<Account />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/inscrit" element={<Inscrit />} />
-            <Route path="/acceuil" element={<Acceuil />} />
-            <Route path="/adminDashbord" element={<AdminDashbord />} />
-            <Route path="/userDashbord" element={<UserDashbord />} />
-            <Route path="/visiteurDashbord" element={<VisiteurDashbord />} />
-            <Route path="/herRequest" element={<HerRequest />} />
-            <Route path="/herService" element={<HerService />} />
-            <Route path="/myservices" element={<MyServices />} />
-            <Route path="/myrequests" element={<MyRequests />} />
-            <Route path="/navbar" element={<Navbar />} />
-            <Route path="/footer" element={<Footer />} />
-            <Route path="/header" element={<Header />} />
-            <Route path="/bookChambre" element={<BookChambre />} />
-            <Route path="/bookSalle" element={<BookSalle />} />
-            <Route path="/chambre" element={<Chambre />} />
-            <Route path="/foyer" element={<Foyer />} />
-            <Route path="/salle" element={<Salle />} />
-            <Route path="/authApi" element={<AuthApi />} />
-            <Route path="/my-component" element={<MyComponent />} />
+    // <MonContexte.Provider value={{ isAuthenticated, setIsAuthenticated }}>
+    <div className="App">
+      <div className="content">
+        {/* <h1>{users}</h1> */}
+        <Routes>
+          <Route
+            path="/autoQuitterReservation"
+            element={<AutoQuitterReservation />}
+          />
+          <Route path="/autoSortie" element={<AutoSortie />} />
+          <Route path="/congeVacance" element={<CongeVacance />} />
+          <Route path="/debutTravaux" element={<DebutTravaux />} />
+          <Route path="/docAdministratif" element={<DocAdministratif />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/inscrit" element={<Inscrit />} />
+          <Route path="/acceuil" element={<Acceuil />} />
+          <Route path="/adminDashbord" element={<AdminDashbord />} />
+          <Route path="/userDashbord" element={<UserDashbord />} />
+          <Route path="/visiteurDashbord" element={<VisiteurDashbord />} />
+          <Route path="/herRequest" element={<HerRequest />} />
+          <Route path="/herService" element={<HerService />} />
+          <Route path="/myservices" element={<MyServices />} />
+          <Route path="/myrequests" element={<MyRequests />} />
+          <Route path="/navbar" element={<Navbar />} />
+          <Route path="/footer" element={<Footer />} />
+          <Route path="/header" element={<Header />} />
+          <Route path="/bookChambre" element={<BookChambre />} />
+          <Route path="/bookSalle" element={<BookSalle />} />
+          <Route path="/chambre" element={<Chambre />} />
+          <Route path="/foyer" element={<Foyer />} />
+          <Route path="/salle" element={<Salle />} />
+          <Route path="/authApi" element={<AuthApi />} />
+          <Route path="/my-component" element={<MyComponent />} />
 
-            {/* <Redirect to="/acceuil" /> */}
-          </Routes>
-        </div>
+          {/* <Redirect to="/acceuil" /> */}
+        </Routes>
       </div>
-    </MonContexte.Provider>
+    </div>
   );
 }
+/* </MonContexte.Provider> */
 export default App;
